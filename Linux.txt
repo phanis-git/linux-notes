@@ -1,0 +1,26 @@
+What is computer  --> IP enabled device
+ex:laptop, washing machine,tv etc.,
+
+1.How to create a server in aws:
+consider your home is a server :
+so for our home we need key and lock system for security and gate .
+so for server also we need security as firewall and key and lock as key-pair . 
+
+so go to any drive in laptop ex: C or D disks and 
+1.create a folder for storing and generating all the private keys.
+2.open GitBash go to that path 
+3.ssh-keygen -f <filename>   ex:ssh-keygen -f daws-86s
+	It will ask passwords dont enter anything just enter 
+4.do  ls command so that we can get public and private keys files - 
+5.open the .pub  (public file) with notepad and copy lines properly for importing key-pair in aws ec2.
+6.we need to create a security group -- firewall creation 
+	ex:like gate for our home  
+Firewall consists of Inbound and Outbound rules. and name the security group for identification
+7.create aws EC2 instance by selecting the key-pair and network settings as - Select existing security group
+8.How to connect to our linux server
+by using  ssh -i <private-key> <username>@<IpV4 address of the linux server>
+
+
+Basic linux commands:
+
+command <options> <inputs>
