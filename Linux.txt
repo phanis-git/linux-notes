@@ -46,7 +46,7 @@ rmdir ---> used to delete a directory
 
 rm -r ---> used to delete the files in the directory
 
-grep --->  used to search the context in the file 
+grep --->  used to search the context in the file ("global regular expression print.")
 
 cp --->(copy) copy and paste the file or directory
 cp <source(file or folder)> <destination>
@@ -57,4 +57,24 @@ mv <source(file or folder)> <destination>
 rename --->
 mv sourceFile editedSourceFile .
 . ---> represents the current directory
+
+wget ---> used to download the text file 
+wget <text-url>
+
+curl ---> display the text file content on screen without download
+curl <text-url>
+
+echo ---> command is used to print
+echo "DevSecOps Phani"
+
+cut ---> It is used to cut some portion in any url etc., or cut command can delimit the text and give us the required fragment
+for these we use cut command along with -d (delimit) and seperator and  fragement 
+echo https://raw.githubusercontent.com/daws-86s/notes/refs/heads/main/session-03.txt | cut -d "/" -f1
+
+awk ---> is also act as the cut but some powerful
+echo https://raw.githubusercontent.com/daws-86s/notes/refs/heads/main/session-03.txt | awk -F "/" '{print $1F}'
+awk -F "/" '{print $1F}' ---> first part 
+awk -F "/" '{print $NF}'  ---> last part
+
+
 
