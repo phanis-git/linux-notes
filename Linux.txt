@@ -20,7 +20,41 @@ Firewall consists of Inbound and Outbound rules. and name the security group for
 8.How to connect to our linux server
 by using  ssh -i <private-key> <username>@<IpV4 address of the linux server>
 
-
+/root is the working directory of root user
+/home/ec2-user is the working directory of normal user
 Basic linux commands:
 
-command <options> <inputs>
+command <inputs> <options> 
+
+~ is the landing of normal user
+$ is the representation of normal user
+# is the representation of root user
+
+sudo su ---> is the command for acting as root user
+sudo su - ---> is landing to super or root user working directory that is (/root) folder
+exit ---> is the command to come back from root user to normal user
+--help  ---> gives all the options for a particular command
+
+touch ---> used to create a file ex: touch linux-notes.txt
+cat > <fileName> ---> used to put the content in that file but previous content will be replaced by present content
+			(Usage : cat > <fileName>  , enter text , enter , ctrl+d)
+
+cat >> <fileName> ---> used to put the content with previous content
+
+mkdir ---> used to create a directory or folder
+rmdir ---> used to delete a directory
+
+rm -r ---> used to delete the files in the directory
+
+grep --->  used to search the context in the file 
+
+cp --->(copy) copy and paste the file or directory
+cp <source(file or folder)> <destination>
+
+mv --->(move) cut and paste 
+mv <source(file or folder)> <destination>
+
+rename --->
+mv sourceFile editedSourceFile .
+. ---> represents the current directory
+
