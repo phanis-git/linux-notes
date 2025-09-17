@@ -1,0 +1,26 @@
+							3 tier Architecture Manual Deployment
+							-------------------------------------
+
+Frontend Tier - Web server and Load Balancer is comes in Frontend tier
+Backend Tier - Application server
+Database Tier - Database server
+
+One Tier Application:- If Database,Backend,Frontend places in a single server then it is called One Tier Application
+Disadvantages:-cannot handle huge traffic
+		Application will crash
+
+Two Tier Application:- Frontend and Backend places in one server and database is handled in other server.
+
+Three Tier Application:Frontend,Backend,Database are places in three seperate servers.
+
+Web Tier or Frontend Tier:-
+HTML,CSS,Javascript,Angular etc., 
+Load Balancing:- It is responsibe for telling which server is available if we search something in browser.
+Web server:- we use nginx webserver and we will place the frontend applications here
+
+Application Tier or Backend Tier:-
+Java, nodejs,phthon etc., these techonologies used to make crud operations by connecting with database
+
+Database Tier:-
+Mysql,Mongodb,Postgress,Redis,ActiveMQ etc.,  used to store data 
+

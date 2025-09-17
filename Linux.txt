@@ -77,4 +77,128 @@ awk -F "/" '{print $1F}' ---> first part
 awk -F "/" '{print $NF}'  ---> last part
 
 
+vim editor : - Vi Improved Editor
+---------------------------------
+
+vim <fileName> ---> command for using vim editor for the files
+1. if file already have , it will open
+2. if file does not have, then it will create it and open
+
+While using Vim editor we need to remember 3 modes
+1.Esc mode (Escape mode)  - Default mode is esc mode.
+2.i mode (Insert mode)
+3.: mode (colen or commad mode)
+
+colen or command mode common commands:-
+---------------------------------------
+
+:wq ---> (write & Quit) after the content entered in file for saving the content we use :wq
+:q ---> just quit without saving any changes
+:q! ---> content doesnot save and quit
+
+:/<search-text> ---> It will search from top to bottom
+:?<search-text> ---> It will search from bottom to top
+
+:set nu ---> It will set the numbers at the first of each line in the file
+:set nonu ---> It will stop displaying line numbers .
+
+:<line-number> ---> the curser will navigate to that line
+
+:<line-number>d ---> the curser will delete the line
+
+:noh ---> no highlight of text
+
+:<line-number>s/<before-text>/<after-text> ---> used to modify any word or text from before to after and 
+						it will modify only first occurance in that line.
+ex:-  :56s/course/COURSE
+
+:<line-number>s/<before-text>/<after-text>/g ---> used to modify any word or text from before to after and 
+						it will modify all the occurances in that line for that word or text
+ex:-  :56s/course/COURSE/g
+
+:%s<line-number>s/<before-text>/<after-text>/g  ---> It will modify all the occurances in the file 
+ex:-  :%s/course/COURSE/g
+
+
+
+Esc mode (Escape mode):-
+------------------------
+u (undo) ---> undo the changes in the file
+ctrl+r (redo) ---> redo the changes in the file
+
+dd ---> deletes the line [In Ecs mode]
+:29d ---> deletes the line [In Colen or command mode]
+
+yy ---> copies the line
+p ---> paste the line below
+shift+p ---> paste the line above
+
+head <file-name> ---> display first 10 lines in that file
+tail <file-name> ---> display last 10 lines in that file
+
+     1  line-1
+     2  line-2
+     3  line-3
+     4  line-4
+     5  line-5
+     6  line-6
+     7  line-7
+     8  line-8
+     9  line-9
+    10  line-10
+    11  line-11
+    12  line-12
+    13  line-13
+    14  line-14
+    15  line-15
+    16  line-16
+    17  line-17
+    18  line-18
+    19  line-19
+
+If we want 5 to 10 
+head -n 10 <file-name> | tail -n 6   (simple formula :-  10 - 5+1 )
+
+Linux Administration:- 
+----------------------
+User Management: - 
+* User
+* Group
+* Role
+* Permission
+
+1.Create user
+2.Remove user
+3.Create group
+4.Remove group
+5.Add user to group
+6.Remove user from group
+
+useradd <user-name> ---> This command will add the user 
+groupadd <group-name> ---> This command will add the group
+
+Note: while executing these commands , the normal user will not able to add these so we need to switch as root user 
+	with the command sudo su - , 
+
+id <user-name> ---> This command is used to check the user is added or not or (user information)
+ex: id sivaphanikumar
+uid=1001(sivaphanikumar) gid=1001(sivaphanikumar) groups=1001(sivaphanikumar)
+
+Note: 1.when we create any user the linux will create user with specific userId(uid) and at the sametime and it will create 
+	a group with the same name , it is called default group.
+      2.If we create any user in linux, he must have atleast one primary group and atleast one secondary group
+That'why if we observe   
+	uid=1001(sivaphanikumar) gid=1001(sivaphanikumar) groups=1001(sivaphanikumar)
+	here gid=1001(sivaphanikumar) - > primary group
+	     groups=1001(sivaphanikumar) - > secondary group
+
+cd /etc/passwd ---> If we want to see all the users information .
+cd /etc/group ---> If we want to see all the groups information
+cd /etc/shadow ---> If we want to see the passwords of users (But in a encrypted format , we cannot see in decrypted format)
+
+
+
+
+
+
 
