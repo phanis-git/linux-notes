@@ -15,7 +15,7 @@ Three Tier Application:Frontend,Backend,Database are places in three seperate se
 
 Web Tier or Frontend Tier:-
 HTML,CSS,Javascript,Angular etc., 
-Load Balancing:- It is responsibe for telling which server is available if we search something in browser.
+Load Balancing:- It is responsibe for forwarding the request to which server is available if we search something in browser.
 Web server:- we use nginx webserver and we will place the frontend applications here
 
 Application Tier or Backend Tier:-
@@ -23,4 +23,24 @@ Java, nodejs,phthon etc., these techonologies used to make crud operations by co
 
 Database Tier:-
 Mysql,Mongodb,Postgress,Redis,ActiveMQ etc.,  used to store data 
+
+
+AMI :- Amazon Machine Image
+Image:- Image is Os + some required packages or softwares
+
+
+						3 Tier Architecture Project-1 Manual Deployment
+						-----------------------------------------------
+For Practise purpose we are using devops-practice AMI
+username:ec2-user
+password:DevOps321
+
+Steps:-
+1. a)First we need to create 3 EC2 servers in aws by using above AMI and 
+	b)without using key-pair. as we are using username and password
+	c)as of now select existing security group or Firewall which allow inbound rules ssh - for ssh port number is 22
+	d)Rename those 3 servers as database,backend, frontend
+
+
+
 
